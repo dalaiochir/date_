@@ -3,13 +3,13 @@ import { useState } from "react"
 
 export default function Home() {
   const router = useRouter()
-  const [noPos, setNoPos] = useState({ top: "auto", left: "auto", position: "relative" })
+  const [noPos, setNoPos] = useState({ top: 'auto', left: 'auto', position: 'relative' })
   const [showPopup, setShowPopup] = useState(false)
 
   const handleNoHover = () => {
     const top = Math.random() * 60 + 10 + "vh"
     const left = Math.random() * 60 + 10 + "vw"
-    setNoPos({ top, left, position: "absolute" })
+    setNoPos({ top, left, position: 'absolute' })
   }
 
   const handleNoClick = () => {
@@ -18,40 +18,62 @@ export default function Home() {
   }
 
   return (
-    <div className="relative bg-white/50 backdrop-blur-3xl shadow-2xl rounded-3xl p-6 sm:p-10 w-full max-w-md text-center border border-white/40 animate-fadeInSoft">
-
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-pink-600 mb-4 animate-pop">
+    <div style={{
+      background: 'rgba(255,255,255,0.5)',
+      backdropFilter: 'blur(16px)',
+      borderRadius: '24px',
+      padding: '24px',
+      maxWidth: '400px',
+      width: '90%',
+      textAlign: 'center',
+      border: '1px solid rgba(255,255,255,0.4)',
+      boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
+      position: 'relative'
+    }}>
+      <h1 style={{ fontSize:'2rem', color:'#db2777', marginBottom:'16px' }}>
         Чи надтай болзоонд явах уу? 💖
       </h1>
-
-      <p className="text-pink-700 italic mb-6 animate-fadeInSoft">
+      <p style={{ color:'#be185d', fontStyle:'italic', marginBottom:'24px' }}>
         Амьдралын хамгийн романтик мөч эхлэх гэж байна…
       </p>
 
-      <div className="flex gap-4 justify-center relative">
-        <button
-          onClick={() => router.push("/date")}
-          className="px-5 sm:px-7 py-2 sm:py-3 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold shadow-lg hover:scale-105 sm:hover:scale-110 transition-all duration-200 active:scale-90 animate-pop"
-        >
+      <div style={{ display:'flex', justifyContent:'center', gap:'16px', position:'relative' }}>
+        <button onClick={() => router.push("/date")} style={buttonStyle}>
           Тийм ❤️
         </button>
 
-        <button
-          style={noPos}
-          onMouseEnter={handleNoHover}
-          onClick={handleNoClick}
-          className="px-5 sm:px-7 py-2 sm:py-3 rounded-2xl bg-rose-300 text-white font-semibold shadow-md hover:bg-rose-400 transition active:scale-90 animate-pop"
-        >
+        <button onMouseEnter={handleNoHover} onClick={handleNoClick} style={{...buttonStyle, position:noPos.position, top:noPos.top, left:noPos.left, backgroundColor:'#f472b6'}}>
           Үгүй
         </button>
       </div>
 
       {showPopup && (
-        <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-          bg-pink-200 text-pink-700 font-bold px-6 py-4 rounded-2xl shadow-xl animate-pop z-50">
-          Үгүй гэдэг сонголт байхгүй нь харамсалтай!😳 😳 😳 
+        <div style={{
+          position:'absolute',
+          top:'33%',
+          left:'50%',
+          transform:'translate(-50%,-50%)',
+          backgroundColor:'#fbcfe8',
+          color:'#be185d',
+          fontWeight:'bold',
+          padding:'16px 24px',
+          borderRadius:'16px',
+          boxShadow:'0 6px 12px rgba(0,0,0,0.2)',
+          zIndex:50
+        }}>
+          😳 Үгүй гэж хэлэх эрх байхгүй шүү!
         </div>
       )}
     </div>
   )
+}
+
+const buttonStyle = {
+  padding:'12px 24px',
+  borderRadius:'24px',
+  backgroundColor:'#ec4899',
+  color:'white',
+  fontWeight:'bold',
+  border:'none',
+  cursor:'pointer'
 }

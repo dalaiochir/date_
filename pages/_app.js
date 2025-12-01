@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }) {
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef(null)
 
-  // 💖 Floating hearts
+  // Floating hearts
   useEffect(() => {
     const spawnHeart = () => {
       const heart = document.createElement('div')
@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
     return () => clearInterval(interval)
   }, [])
 
-  // 🎹 Piano background
+  // Piano background
   useEffect(() => {
     const audio = new Audio("/piano.mp3")
     audio.loop = true
@@ -42,11 +42,24 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      {/* Piano toggle button */}
-      <div className="fixed bottom-4 right-4 z-50">
-        <button
-          onClick={toggleAudio}
-          className="px-3 sm:px-4 py-2 sm:py-2.5 rounded-2xl bg-pink-400 text-white text-sm sm:text-base shadow-lg hover:bg-pink-500 transition"
+      <div style={{
+        position: 'fixed',
+        bottom: '16px',
+        right: '16px',
+        zIndex: 50
+      }}>
+        <button 
+          onClick={toggleAudio} 
+          style={{
+            padding: '10px 16px',
+            borderRadius: '24px',
+            backgroundColor: '#ec4899',
+            color: 'white',
+            fontWeight: 'bold',
+            border: 'none',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+            cursor: 'pointer'
+          }}
         >
           {isPlaying ? "🔊 Pause Piano" : "🎹 Play Piano"}
         </button>
