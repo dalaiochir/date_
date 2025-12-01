@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Surprise() {
   return (
     <div style={containerStyle}>
-      <h1 style={titleStyle}>Сюрприз💝💝💝</h1>
+      <h1 style={titleStyle}>Зөвхөн чамд зориулсан сюрприз💝💝💝</h1>
 
       <div style={{display:'flex', justifyContent:'center', marginBottom:'24px'}}>
         <Image src="/girl1.jpg" width={300} height={300} style={{borderRadius:'24px', boxShadow:'0 10px 20px rgba(0,0,0,0.2)'}} alt="Зураг"/>
@@ -12,7 +12,7 @@ export default function Surprise() {
 
       <p style={{fontStyle:'italic', marginBottom:'24px'}}>
         “Чи миний өдрийг гэрэлтүүлж, миний инээмсэглэлийг илүү тод болгодог… 
-        Чамтай хамт байх мөч бүр үнэхээр гайхалтай, яг л зүүд мэт...” 💗
+        Чамтай хамт байх мөч бүр үнэхээр гайхалтай, яг л зүүд мэт...” 💗💗💗
       </p>
 
       <Link href="/">
