@@ -3,7 +3,15 @@ import { useState } from "react"
 
 export default function DatePage() {
   const router = useRouter()
-  const location = "Хамтдаа дуртай дуугаа сонсож өдрийг эхлүүлнэ\n Хоолонд орж дуртай амттангаа иднэ.\n Кино үзэх \n Тоглох \n Шөнийн зугаалга"
+  const location = (
+  <>
+    Хамтдаа дуртай дуугаа сонсож өдрийг эхлүүлнэ<br />
+    Хоолонд орж дуртай амттангаа иднэ.<br />
+    Кино үзэх<br />
+    Тоглох<br />
+    Шөнийн зугаалга
+  </>
+)
   const time = "Чиний хүссэн өдөр"
   const [showConfetti, setShowConfetti] = useState(false)
 
