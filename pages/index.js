@@ -61,7 +61,7 @@ export default function Home() {
           boxShadow:'0 6px 12px rgba(0,0,0,0.2)',
           zIndex:50
         }}>
-          😳 Үгүй гэж хэлэх эрх байхгүй шүү!
+          Үгүй гэдэг хариулт байхгүй нь харамсалтай юм😳 😳 😳 
         </div>
       )}
     </div>
