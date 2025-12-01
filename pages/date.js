@@ -18,15 +18,16 @@ export default function DatePage() {
   return (
     <div style={containerStyle}>
       {showConfetti && <HeartConfetti />}
-      <h1 style={titleStyle}>Бидний болзоо төгс байх болно 💘</h1>
+      <h1 style={titleStyle}>Бидний болзоо төгс байх болно💘</h1>
 
       <div style={{marginBottom:'24px'}}>
+        <p>Надтай болзоонд явах шийдвэрийг гаргасан чамд үнэхээр их баярлалаа🫶🏻🥹</p>
         <p>📍 Хаана: {location}</p>
         <p>🕒 Хэзээ: {time}</p>
       </div>
 
       <button onClick={handleSurprise} style={{...buttonStyle, background:'#ec4899'}}>
-        🎁 Surprise!
+        🎁 Surprise 🎁
       </button>
     </div>
   )
