@@ -3,8 +3,8 @@ import { useState } from "react"
 
 export default function DatePage() {
   const router = useRouter()
-  const location = "Café Aroma — Romantic Setup"
-  const time = "2025-12-05 • 19:00"
+  const location = "Хамтдаа дуртай дуугаа сонсож өдрийг эхлүүлнэ\n Хоолонд орж дуртай амттангаа иднэ.\n Кино үзэх \n Тоглох \n Шөнийн зугаалга"
+  const time = "Чиний хүссэн өдөр"
   const [showConfetti, setShowConfetti] = useState(false)
 
   const handleSurprise = () => {
@@ -22,7 +22,7 @@ export default function DatePage() {
 
       <div style={{marginBottom:'24px'}}>
         <p>Надтай болзоонд явах шийдвэрийг гаргасан чамд үнэхээр их баярлалаа🫶🏻🥹</p>
-        <p>📍 Хаана: {location}</p>
+        <p>📍 Хийх зүйлсийн жагсаалт: {location}</p>
         <p>🕒 Хэзээ: {time}</p>
       </div>
 
