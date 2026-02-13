@@ -7,7 +7,7 @@ export default function Surprise() {
       <h1 style={titleStyle}>Зөвхөн чамд зориулсан сюрприз💝💝💝</h1>
 
       <div style={{display:'flex', justifyContent:'center', marginBottom:'24px'}}>
-        <Image src="/girl1.jpg" width={300} height={300} style={{borderRadius:'24px', boxShadow:'0 10px 20px rgba(0,0,0,0.2)'}} alt="Зураг"/>
+        <Image src="/baysaa.jpg" width={300} height={300} style={{borderRadius:'24px', boxShadow:'0 10px 20px rgba(0,0,0,0.2)'}} alt="Зураг"/>
       </div>
 
       <p style={{fontStyle:'italic', marginBottom:'24px'}}>
